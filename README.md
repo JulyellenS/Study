@@ -1,4 +1,3 @@
-# study
 # Sobre o projeto
 
 A empresa fictícia ESTUDE, quer lançar uma plataforma de cursos online e vocês foram contratados como desenvolvedores!
