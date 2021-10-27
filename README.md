@@ -8,6 +8,6 @@ O objetivo do desafio é desenvolver um Back-End funcional para cadastro de novo
 Projeto desenvolvido durante o programa de formação Acelera M4U em parceria com a Gama Academy.
 
 Tecnologias utilizadas:
-Java;
-Postman;
-Banco de dados MySql.
+- Java;
+- Postman;
+- Banco de dados MySql..
