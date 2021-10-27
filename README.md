@@ -11,4 +11,4 @@ Projeto desenvolvido durante o programa de formação Acelera M4U em parceria co
 Tecnologias utilizadas:
 - Java;
 - Postman;
-- Banco de dados MySql.
+- Banco de dados MySql..
