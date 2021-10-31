@@ -1,21 +1,41 @@
 package com.m4u.study.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_adress")
 public class Adress {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idAdress;
 	
+	@Column(name = "street", nullable = false)
 	private String street;
 	
+	@Column(name = "city", nullable = false)
 	private String city;
 	
+	@Column(name = "state", nullable = false)
 	private String state;
 	
+	@Column(name = "zipCode", nullable = false)
 	private Integer zipCode;
 	
+	@Column(name = "country", nullable = false)
 	private String country;
 	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name = "tbl_student", referencedColumnName = "idStudent", nullable = false)
 	private Student idStudent;
-	
 	
 	
 	public Adress() {}
@@ -83,9 +103,6 @@ public class Adress {
 		return idStudent;
 	}
 
-	public void setIdStudent(Student idStudent) {
-		this.idStudent = idStudent;
-	}
 
 	@Override
 	public String toString() {
