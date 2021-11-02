@@ -34,7 +34,7 @@ public class Adress {
 	private String country;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "student", referencedColumnName = "idStudent", nullable = false)
+	@JoinColumn(name = "tbl_student", referencedColumnName = "idStudent", nullable = false)
 	private Student idStudent;
 	
 	
@@ -99,7 +99,7 @@ public class Adress {
 		this.country = country;
 	}
 
-	public Student getidStudent() {
+	public Student getIdStudent() {
 		return idStudent;
 	}
 
