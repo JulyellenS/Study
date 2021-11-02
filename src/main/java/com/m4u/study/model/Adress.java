@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -33,8 +33,8 @@ public class Adress {
 	@Column(name = "country", nullable = false)
 	private String country;
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "tbl_student", referencedColumnName = "idStudent", nullable = false)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "student", referencedColumnName = "idStudent", nullable = false)
 	private Student idStudent;
 	
 	
@@ -99,7 +99,7 @@ public class Adress {
 		this.country = country;
 	}
 
-	public Student getIdStudent() {
+	public Student getidStudent() {
 		return idStudent;
 	}
 

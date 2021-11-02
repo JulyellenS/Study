@@ -26,7 +26,7 @@ public class User {
 	private String password;
 	
 	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "tbl_student", referencedColumnName = "idStudent", nullable = false)
+	@JoinColumn(name = "student", referencedColumnName = "idStudent", nullable = false)
 	private Student idStudent;
 
 
@@ -74,11 +74,11 @@ public void setPassword(String password) {
 	this.password = password;
 }
 
-public Student getIdStudent() {
+public Student getidStudent() {
 	return idStudent;
 }
 
-public void setIdStudent(Student idStudent) {
+public void setidStudent(Student idStudent) {
 	this.idStudent = idStudent;
 }
 

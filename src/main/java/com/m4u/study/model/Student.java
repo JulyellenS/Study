@@ -1,6 +1,5 @@
 package com.m4u.study.model;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -9,41 +8,31 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
-@Table(name="student")
-public class Student implements Serializable {
-	
-	/**
-	 * 
-	 */
-	@Transient
-	private static final long serialVersionUID = 5817641633013281400L;
+@Table(name="tbl_student")
+public class Student {
 	
 	@Id
-	@Column(name = "id_student")
+	@Column(name = "idStudent")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idStudent;
 	
-	@Column(name = "name_student", length = 35, nullable = false)
+	@Column(name = "nameStudent", length = 35, nullable = false)
 	private String name;
 	
-	@Column(name = "age_student", length = 10, nullable = false)
+	@Column(name = "ageStudent", length = 10, nullable = false)
 	private int age;
 	
-	@Column(name = "email_student", length = 35, nullable = false)
+	@Column(name = "emailStudent", length = 35, nullable = false)
 	private String email;
 	
-	@ManyToMany(mappedBy = "student", fetch = FetchType.EAGER)
-	@JoinColumn(name = "student", referencedColumnName = "id_student", nullable = false)
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<User> users;
 	
-	@ManyToMany(mappedBy = "student", fetch = FetchType.EAGER)
-	@JoinColumn(name = "student", referencedColumnName = "id_student", nullable = false)
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<Adress> adresses;
 	
 	public Student () {
