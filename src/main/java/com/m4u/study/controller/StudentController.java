@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/student")
 public class StudentController {
 	
+	@SuppressWarnings("unused")
+	private void sysout() {
+		System.out.println("Estou aqui!");
+
+	} 
 	
 
 }
