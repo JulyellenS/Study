@@ -1,4 +1,6 @@
-# Sobre o projeto Estude M4U
+![M4U](https://canalconfidencial.com.br/m4u/images/Logo_Novo_M4U_Horizontal_Colorido.png)
+
+# Projeto Estude M4U
 ## :rocket:[M4U] Grupo3 - turma1 
 
 
